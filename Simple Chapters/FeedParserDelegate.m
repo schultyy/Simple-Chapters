@@ -22,6 +22,10 @@
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict{
+    if([elementName isEqualToString:@"link"]){
+        id value = [attributeDict valueForKey:@"href"];
+        [feed setUrl:value];
+    }
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
@@ -33,6 +37,9 @@
         return;
     else if([elementName isEqualToString:@"name"]){
         [feed setAuthor:buffer];
+    }
+    else if([elementName isEqualToString:@"id"]){
+        [feed setIdentifier:buffer];
     }
     
     buffer = nil;

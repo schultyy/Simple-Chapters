@@ -37,7 +37,7 @@
 
 -(NSData *) saveToXml{
     
-    NSXMLElement *root = (NSXMLElement *) [NSXMLNode elementWithName:@"feed"];
+    NSXMLElement *root = [NSXMLElement elementWithName:@"feed"];
     
     [root addNamespace: [NSXMLNode namespaceWithName:@"" stringValue:@"http://www.w3.org/2005/Atom"]];
     
@@ -60,8 +60,18 @@
     
     [authorNode addChild:authorNameNode];
     
-    [root addChild:titleNode];
-    [root addChild:authorNode];
+    NSXMLElement *linkNode = [[NSXMLElement alloc] initWithName:@"link"];
+    [linkNode addAttribute: [NSXMLNode attributeWithName:@"href" stringValue:url]];
+    
+    NSXMLNode *identifierNode = [[NSXMLNode alloc] initWithKind:NSXMLElementKind];
+    [identifierNode setName:@"id"];
+    [identifierNode setStringValue:identifier];
+    
+    [root addChild: titleNode];
+    [root addChild: authorNode];
+    [root addChild: linkNode];
+    [root addChild: identifierNode];
+    
     return [document XMLData];
 }
 
