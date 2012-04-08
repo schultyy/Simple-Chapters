@@ -21,17 +21,28 @@
 
 @synthesize updated;
 
+@synthesize entries;
+
+-(id) init{
+    self = [self initWithData:nil];
+    return self;
+}
+
 -(id) initWithData:(NSData *)data{
-    
-    id parserDelegate = [[FeedParserDelegate alloc] init];
-    id parser = [[NSXMLParser alloc] initWithData:data];
-    [parser setDelegate: parserDelegate];
-    BOOL result = [parser parse];
-    if(result){
-        self = [parserDelegate feed];
+    self = [super init];
+    if(self) {
+        
+        entries = [[NSMutableArray alloc] init];
+        
+        id parserDelegate = [[FeedParserDelegate alloc] init];
+        id parser = [[NSXMLParser alloc] initWithData:data];
+        [parser setDelegate: parserDelegate];
+        BOOL result = [parser parse];
+        if(result){
+            self = [parserDelegate feed];
+        }
     }
-    else
-        self = nil;
+    
     return self;
 }
 

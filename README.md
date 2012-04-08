@@ -18,10 +18,8 @@ Features / ToDo
 * Write chapters in to audio files
 * ...
 
-Chapter spec's
+Chapter specs
 ===================
-
-See here:
 
 http://podlove.org/simple-chapters/
 

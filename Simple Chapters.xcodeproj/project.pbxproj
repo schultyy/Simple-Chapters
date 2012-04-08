@@ -16,6 +16,8 @@
 		A18E1D5615320F6A00B5A6FD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A18E1D5415320F6A00B5A6FD /* MainMenu.xib */; };
 		A18E1D5F15320FCF00B5A6FD /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = A18E1D5E15320FCF00B5A6FD /* Feed.m */; };
 		A18E1D621532103300B5A6FD /* FeedParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A18E1D611532103300B5A6FD /* FeedParserDelegate.m */; };
+		A18E1D651532236E00B5A6FD /* FeedEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = A18E1D641532236D00B5A6FD /* FeedEntry.m */; };
+		A18E1D681532240900B5A6FD /* Enclosure.m in Sources */ = {isa = PBXBuildFile; fileRef = A18E1D671532240900B5A6FD /* Enclosure.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		A18E1D5E15320FCF00B5A6FD /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
 		A18E1D601532103300B5A6FD /* FeedParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedParserDelegate.h; sourceTree = "<group>"; };
 		A18E1D611532103300B5A6FD /* FeedParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedParserDelegate.m; sourceTree = "<group>"; };
+		A18E1D631532236D00B5A6FD /* FeedEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedEntry.h; sourceTree = "<group>"; };
+		A18E1D641532236D00B5A6FD /* FeedEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedEntry.m; sourceTree = "<group>"; };
+		A18E1D661532240900B5A6FD /* Enclosure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enclosure.h; sourceTree = "<group>"; };
+		A18E1D671532240900B5A6FD /* Enclosure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enclosure.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,10 @@
 				A18E1D5E15320FCF00B5A6FD /* Feed.m */,
 				A18E1D601532103300B5A6FD /* FeedParserDelegate.h */,
 				A18E1D611532103300B5A6FD /* FeedParserDelegate.m */,
+				A18E1D631532236D00B5A6FD /* FeedEntry.h */,
+				A18E1D641532236D00B5A6FD /* FeedEntry.m */,
+				A18E1D661532240900B5A6FD /* Enclosure.h */,
+				A18E1D671532240900B5A6FD /* Enclosure.m */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -191,6 +201,8 @@
 				A18E1D5015320F6A00B5A6FD /* SCDocument.m in Sources */,
 				A18E1D5F15320FCF00B5A6FD /* Feed.m in Sources */,
 				A18E1D621532103300B5A6FD /* FeedParserDelegate.m in Sources */,
+				A18E1D651532236E00B5A6FD /* FeedEntry.m in Sources */,
+				A18E1D681532240900B5A6FD /* Enclosure.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

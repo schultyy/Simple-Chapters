@@ -20,6 +20,8 @@
 
 @property (retain) NSString *identifier;
 
+@property (retain) NSMutableArray *entries;
+
 -(id) initWithData:(NSData*) data;
 
 -(NSData *) saveToXml;
