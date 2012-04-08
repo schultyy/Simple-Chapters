@@ -11,7 +11,10 @@
 #import "Feed.h"
 
 @implementation SCDocument
+
 @synthesize feed;
+@synthesize entryDetailSheet;
+@synthesize documentWindow;
 
 - (id)init
 {
@@ -62,6 +65,23 @@
     return YES;
 }
 
+-(IBAction)showEntryDetailSheet:(id)sender{
+    
+    [NSApp beginSheet:entryDetailSheet
+            modalForWindow:documentWindow
+            modalDelegate:nil
+            didEndSelector:NULL
+            contextInfo:NULL];
+}
+
+-(IBAction)endEntryDetailSheet:(id)sender{
+    [NSApp endSheet: entryDetailSheet];
+    [entryDetailSheet orderOut:sender];
+}
+
+-(IBAction)closeAndSaveEntryDetailSheet:(id)sender{
+    [self endEntryDetailSheet:sender];
+}
 
 + (BOOL)autosavesInPlace
 {

@@ -10,5 +10,17 @@
 #import "Feed.h"
 
 @interface SCDocument : NSDocument
+
 @property (retain) Feed *feed;
+
+@property (retain) IBOutlet NSWindow *documentWindow;
+
+@property (retain) IBOutlet NSWindow *entryDetailSheet;
+
+-(IBAction)showEntryDetailSheet:(id)sender;
+
+-(IBAction)endEntryDetailSheet:(id)sender;
+
+-(IBAction)closeAndSaveEntryDetailSheet:(id)sender;
+
 @end
