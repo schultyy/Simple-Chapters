@@ -7,6 +7,7 @@
 //
 
 #import "Feed.h"
+#import "FeedEntry.h"
 #import "FeedParserDelegate.h"
 
 @implementation Feed
@@ -82,6 +83,12 @@
     [root addChild: authorNode];
     [root addChild: linkNode];
     [root addChild: identifierNode];
+    
+    for (int i = 0; i < [entries count]; i++) {
+        FeedEntry *obj = [entries objectAtIndex:i];
+        
+        [root addChild: [obj saveToXml]];
+    }
     
     return [document XMLData];
 }

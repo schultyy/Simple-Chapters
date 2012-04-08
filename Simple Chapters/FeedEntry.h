@@ -23,8 +23,6 @@
 
 @property (retain) Enclosure *enclosure;
 
--(id) initWithData:(NSData*) data;
-
--(void) saveToXml: (NSData*) data;
+-(NSXMLElement *) saveToXml;
 
 @end

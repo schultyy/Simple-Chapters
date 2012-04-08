@@ -31,4 +31,28 @@
     return self;
 }
 
+-(NSXMLElement *) saveToXml{
+    NSXMLElement *rootEntry = [[NSXMLElement alloc] initWithKind:NSXMLElementKind];
+    
+    [rootEntry setName:@"entry"];
+    
+    NSXMLNode *titleNode = [NSXMLNode elementWithName:@"title" stringValue:title];
+    NSXMLNode *idNode = [NSXMLNode elementWithName:@"id" stringValue:identifier];
+    NSXMLElement *linkNode = [NSXMLElement elementWithName:@"link"];
+    [linkNode addAttribute: [NSXMLNode elementWithName:@"href" stringValue:link]];
+    NSXMLNode *summaryNode = [NSXMLNode elementWithName:@"summary" stringValue:summary];
+    NSXMLNode *updatedNode = [NSXMLNode elementWithName:@"updated" stringValue:[updated description]];
+    
+    NSXMLElement *enclosureElement = [enclosure saveToXml];
+    
+    [rootEntry addChild: titleNode];
+    [rootEntry addChild: idNode];
+    [rootEntry addChild: linkNode];
+    [rootEntry addChild: summaryNode];
+    [rootEntry addChild: updatedNode];
+    [rootEntry addChild: enclosureElement];
+    
+    return rootEntry;
+}
+
 @end

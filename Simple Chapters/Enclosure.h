@@ -18,8 +18,6 @@
 
 @property (retain) NSString *href;
 
--(id) initWithData:(NSData*) data;
-
--(void) saveToXml: (NSData*) data;
+-(NSXMLElement *) saveToXml;
 
 @end

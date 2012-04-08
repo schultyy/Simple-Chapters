@@ -18,4 +18,15 @@
 
 @synthesize type;
 
+-(NSXMLElement *) saveToXml{
+    NSXMLElement *root = [[NSXMLElement alloc] initWithKind:NSXMLElementKind];
+    [root setName: @"link"];
+    
+    [root addAttribute: [NSXMLNode elementWithName:@"rel" stringValue: rel]];
+    [root addAttribute: [NSXMLNode elementWithName:@"type" stringValue:type]];
+    [root addAttribute: [NSXMLNode elementWithName:@"length" stringValue: [length stringValue]]];
+    [root addAttribute: [NSXMLNode elementWithName:@"href" stringValue: href]];
+    return root;
+}
+
 @end
