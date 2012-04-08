@@ -9,12 +9,14 @@
 #import "SCDocument.h"
 
 #import "Feed.h"
+#import "FeedEntry.h"
 
 @implementation SCDocument
 
 @synthesize feed;
 @synthesize entryDetailSheet;
 @synthesize documentWindow;
+@synthesize currentFeedEntry;
 
 - (id)init
 {
@@ -67,6 +69,8 @@
 
 -(IBAction)showEntryDetailSheet:(id)sender{
     
+    currentFeedEntry = [[FeedEntry alloc] init];
+    
     [NSApp beginSheet:entryDetailSheet
             modalForWindow:documentWindow
             modalDelegate:nil
@@ -81,6 +85,9 @@
 
 -(IBAction)closeAndSaveEntryDetailSheet:(id)sender{
     [self endEntryDetailSheet:sender];
+    [currentFeedEntry setUpdated: [NSDate date]];
+    [[feed entries] addObject: currentFeedEntry];
+    currentFeedEntry = nil;
 }
 
 + (BOOL)autosavesInPlace

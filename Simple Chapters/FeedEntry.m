@@ -39,7 +39,7 @@
     NSXMLNode *titleNode = [NSXMLNode elementWithName:@"title" stringValue:title];
     NSXMLNode *idNode = [NSXMLNode elementWithName:@"id" stringValue:identifier];
     NSXMLElement *linkNode = [NSXMLElement elementWithName:@"link"];
-    [linkNode addAttribute: [NSXMLNode elementWithName:@"href" stringValue:link]];
+    [linkNode addAttribute: [NSXMLNode attributeWithName:@"href" stringValue:link]];
     NSXMLNode *summaryNode = [NSXMLNode elementWithName:@"summary" stringValue:summary];
     NSXMLNode *updatedNode = [NSXMLNode elementWithName:@"updated" stringValue:[updated description]];
     

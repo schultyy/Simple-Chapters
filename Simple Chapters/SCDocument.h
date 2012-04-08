@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Feed.h"
+#import "FeedEntry.h"
 
 @interface SCDocument : NSDocument
 
@@ -16,6 +17,8 @@
 @property (retain) IBOutlet NSWindow *documentWindow;
 
 @property (retain) IBOutlet NSWindow *entryDetailSheet;
+
+@property (retain) FeedEntry *currentFeedEntry;
 
 -(IBAction)showEntryDetailSheet:(id)sender;
 
