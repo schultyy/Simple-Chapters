@@ -7,7 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Feed.h"
 
-@interface FeedParserDelegate : NSObject
+@interface FeedParserDelegate : NSObject<NSXMLParserDelegate>{
+    NSMutableString *buffer;
+}
+
+@property (retain) Feed *feed;
+
+- (void)parserDidStartDocument:(NSXMLParser *)parser;
+
+- (void)parserDidEndDocument:(NSXMLParser *)parser;
+
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict;
+
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName;
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string;
 
 @end

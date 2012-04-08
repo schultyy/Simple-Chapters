@@ -7,7 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Feed.h"
 
 @interface SCDocument : NSDocument
-
+@property (retain) Feed *feed;
 @end

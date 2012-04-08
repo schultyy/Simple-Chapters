@@ -14,6 +14,8 @@
 		A18E1D5015320F6A00B5A6FD /* SCDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = A18E1D4F15320F6A00B5A6FD /* SCDocument.m */; };
 		A18E1D5315320F6A00B5A6FD /* SCDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = A18E1D5115320F6A00B5A6FD /* SCDocument.xib */; };
 		A18E1D5615320F6A00B5A6FD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A18E1D5415320F6A00B5A6FD /* MainMenu.xib */; };
+		A18E1D5F15320FCF00B5A6FD /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = A18E1D5E15320FCF00B5A6FD /* Feed.m */; };
+		A18E1D621532103300B5A6FD /* FeedParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A18E1D611532103300B5A6FD /* FeedParserDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +24,19 @@
 		A18E1D3F15320F6A00B5A6FD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		A18E1D4015320F6A00B5A6FD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A18E1D4115320F6A00B5A6FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		A18E1D4415320F6A00B5A6FD /* Simple Chapters-Info.plist */ = {isa = PBXFileReference; path = "Simple Chapters-Info.plist"; sourceTree = "<group>"; };
+		A18E1D4415320F6A00B5A6FD /* Simple Chapters-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Simple Chapters-Info.plist"; sourceTree = "<group>"; };
 		A18E1D4615320F6A00B5A6FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A18E1D4815320F6A00B5A6FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A18E1D4A15320F6A00B5A6FD /* Simple Chapters-Prefix.pch */ = {isa = PBXFileReference; path = "Simple Chapters-Prefix.pch"; sourceTree = "<group>"; };
+		A18E1D4A15320F6A00B5A6FD /* Simple Chapters-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Simple Chapters-Prefix.pch"; sourceTree = "<group>"; };
 		A18E1D4C15320F6A00B5A6FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		A18E1D4E15320F6A00B5A6FD /* SCDocument.h */ = {isa = PBXFileReference; path = SCDocument.h; sourceTree = "<group>"; };
+		A18E1D4E15320F6A00B5A6FD /* SCDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCDocument.h; sourceTree = "<group>"; };
 		A18E1D4F15320F6A00B5A6FD /* SCDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCDocument.m; sourceTree = "<group>"; };
 		A18E1D5215320F6A00B5A6FD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SCDocument.xib; sourceTree = "<group>"; };
 		A18E1D5515320F6A00B5A6FD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A18E1D5D15320FCF00B5A6FD /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
+		A18E1D5E15320FCF00B5A6FD /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
+		A18E1D601532103300B5A6FD /* FeedParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedParserDelegate.h; sourceTree = "<group>"; };
+		A18E1D611532103300B5A6FD /* FeedParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedParserDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 		A18E1D4215320F6A00B5A6FD /* Simple Chapters */ = {
 			isa = PBXGroup;
 			children = (
+				A18E1D5C15320FB400B5A6FD /* Domain */,
 				A18E1D4E15320F6A00B5A6FD /* SCDocument.h */,
 				A18E1D4F15320F6A00B5A6FD /* SCDocument.m */,
 				A18E1D5115320F6A00B5A6FD /* SCDocument.xib */,
@@ -103,6 +110,17 @@
 				A18E1D4B15320F6A00B5A6FD /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A18E1D5C15320FB400B5A6FD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A18E1D5D15320FCF00B5A6FD /* Feed.h */,
+				A18E1D5E15320FCF00B5A6FD /* Feed.m */,
+				A18E1D601532103300B5A6FD /* FeedParserDelegate.h */,
+				A18E1D611532103300B5A6FD /* FeedParserDelegate.m */,
+			);
+			name = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +189,8 @@
 			files = (
 				A18E1D4915320F6A00B5A6FD /* main.m in Sources */,
 				A18E1D5015320F6A00B5A6FD /* SCDocument.m in Sources */,
+				A18E1D5F15320FCF00B5A6FD /* Feed.m in Sources */,
+				A18E1D621532103300B5A6FD /* FeedParserDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

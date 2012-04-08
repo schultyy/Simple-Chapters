@@ -10,4 +10,18 @@
 
 @interface Feed : NSObject
 
+@property (retain) NSString *title;
+
+@property (retain) NSString *url;
+
+@property (retain) NSDate *updated;
+
+@property (retain) NSString *author;
+
+@property (retain) NSString *identifier;
+
+-(id) initWithData:(NSData*) data;
+
+-(NSData *) saveToXml;
+
 @end
