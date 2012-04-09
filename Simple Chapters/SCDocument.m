@@ -17,6 +17,7 @@
 @synthesize entryDetailSheet;
 @synthesize documentWindow;
 @synthesize currentFeedEntry;
+@synthesize tableView;
 
 - (id)init
 {
@@ -88,6 +89,7 @@
     [currentFeedEntry setUpdated: [NSDate date]];
     [[feed entries] addObject: currentFeedEntry];
     currentFeedEntry = nil;
+    [tableView reloadData];
 }
 
 + (BOOL)autosavesInPlace

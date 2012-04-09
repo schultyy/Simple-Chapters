@@ -18,6 +18,8 @@
 
 @property (retain) IBOutlet NSWindow *entryDetailSheet;
 
+@property (retain) IBOutlet NSTableView *tableView;
+
 @property (retain) FeedEntry *currentFeedEntry;
 
 -(IBAction)showEntryDetailSheet:(id)sender;

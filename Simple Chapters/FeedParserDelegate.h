@@ -8,10 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "Feed.h"
+#import "FeedEntry.h"
 
 @interface FeedParserDelegate : NSObject<NSXMLParserDelegate>{
     NSMutableString *buffer;
+    NSInteger state;
+    FeedEntry *currentEntry;
 }
+
+extern NSInteger const ParserStateHeader;
+extern NSInteger const ParserStateEntry;
 
 @property (retain) Feed *feed;
 
