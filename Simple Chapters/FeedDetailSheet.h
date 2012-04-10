@@ -10,4 +10,9 @@
 
 @interface FeedDetailSheet : NSWindowController
 
++(void) showFeedDetailSheetForWindow: (NSWindow *) window;
+
+-(IBAction)saveAndClose:(id)sender;
+-(IBAction)closeWithoutSaving:(id)sender;
+
 @end

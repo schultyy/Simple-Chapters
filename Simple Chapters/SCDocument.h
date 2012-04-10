@@ -20,4 +20,6 @@
 
 -(IBAction) showFeedInformationSheet:(id)sender;
 
+-(IBAction)addFeedEntry:(id)sender;
+
 @end

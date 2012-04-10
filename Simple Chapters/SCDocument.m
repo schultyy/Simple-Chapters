@@ -11,6 +11,7 @@
 #import "Feed.h"
 #import "FeedEntry.h"
 #import "BasicFeedInfoSheet.h"
+#import "FeedDetailSheet.h"
 
 @implementation SCDocument
 
@@ -71,6 +72,10 @@
 
 -(IBAction)showFeedInformationSheet:(id)sender{
     [BasicFeedInfoSheet showSheetForWindow: [self documentWindow]];
+}
+
+-(IBAction)addFeedEntry:(id)sender{
+    [FeedDetailSheet showFeedDetailSheetForWindow: [self documentWindow]];
 }
 
 + (BOOL)autosavesInPlace
