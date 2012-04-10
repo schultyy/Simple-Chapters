@@ -16,16 +16,8 @@
 
 @property (retain) IBOutlet NSWindow *documentWindow;
 
-@property (retain) IBOutlet NSWindow *entryDetailSheet;
-
-@property (retain) IBOutlet NSTableView *tableView;
-
 @property (retain) FeedEntry *currentFeedEntry;
 
--(IBAction)showEntryDetailSheet:(id)sender;
-
--(IBAction)endEntryDetailSheet:(id)sender;
-
--(IBAction)closeAndSaveEntryDetailSheet:(id)sender;
+-(IBAction) showFeedInformationSheet:(id)sender;
 
 @end

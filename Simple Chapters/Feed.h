@@ -10,15 +10,15 @@
 
 @interface Feed : NSObject
 
-@property (retain) NSString *title;
+@property (readwrite, copy) NSString *title;
 
-@property (retain) NSString *url;
+@property (readwrite, copy) NSString *url;
 
-@property (retain) NSDate *updated;
+@property (readwrite, copy) NSDate *updated;
 
-@property (retain) NSString *author;
+@property (readwrite, copy) NSString *author;
 
-@property (retain) NSString *identifier;
+@property (readwrite, copy) NSString *identifier;
 
 @property (retain) NSMutableArray *entries;
 

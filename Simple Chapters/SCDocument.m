@@ -10,14 +10,13 @@
 
 #import "Feed.h"
 #import "FeedEntry.h"
+#import "BasicFeedInfoSheet.h"
 
 @implementation SCDocument
 
 @synthesize feed;
-@synthesize entryDetailSheet;
 @synthesize documentWindow;
 @synthesize currentFeedEntry;
-@synthesize tableView;
 
 - (id)init
 {
@@ -50,7 +49,9 @@
     //    NSException *exception = [NSException exceptionWithName:@"UnimplementedMethod" reason:[NSString stringWithFormat:@"%@ is unimplemented", NSStringFromSelector(_cmd)] userInfo:nil];
     //    @throw exception;
     
-    return [feed saveToXml];
+    NSData *data = [feed saveToXml];
+    
+    return data;
 }
 
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError
@@ -68,28 +69,8 @@
     return YES;
 }
 
--(IBAction)showEntryDetailSheet:(id)sender{
-    
-    currentFeedEntry = [[FeedEntry alloc] init];
-    
-    [NSApp beginSheet:entryDetailSheet
-            modalForWindow:documentWindow
-            modalDelegate:nil
-            didEndSelector:NULL
-            contextInfo:NULL];
-}
-
--(IBAction)endEntryDetailSheet:(id)sender{
-    [NSApp endSheet: entryDetailSheet];
-    [entryDetailSheet orderOut:sender];
-}
-
--(IBAction)closeAndSaveEntryDetailSheet:(id)sender{
-    [self endEntryDetailSheet:sender];
-    [currentFeedEntry setUpdated: [NSDate date]];
-    [[feed entries] addObject: currentFeedEntry];
-    currentFeedEntry = nil;
-    [tableView reloadData];
+-(IBAction)showFeedInformationSheet:(id)sender{
+    [BasicFeedInfoSheet showSheetForWindow: [self documentWindow]];
 }
 
 + (BOOL)autosavesInPlace

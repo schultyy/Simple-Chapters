@@ -11,15 +11,15 @@
 
 @interface FeedEntry : NSObject
 
-@property (retain) NSString *title;
+@property (readwrite, copy) NSString *title;
 
-@property (retain) NSString *link;
+@property (readwrite, copy) NSString *link;
 
-@property (retain) NSString *identifier;
+@property (readwrite, copy) NSString *identifier;
 
-@property (retain) NSDate *updated;
+@property (readwrite, copy) NSDate *updated;
 
-@property (retain) NSString *summary;
+@property (readwrite, copy) NSString *summary;
 
 @property (retain) Enclosure *enclosure;
 

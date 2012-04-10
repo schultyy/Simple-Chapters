@@ -29,6 +29,7 @@ NSInteger const ParserStateEntry = 1;
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict{
     if([elementName isEqualToString:@"link"]){
+        
         if(state == ParserStateHeader){
             id value = [attributeDict valueForKey:@"href"];
             [feed setUrl:value];
@@ -63,35 +64,40 @@ NSInteger const ParserStateEntry = 1;
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
     
+    id cleanedBuffer = [buffer stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
     if(state == ParserStateEntry){
         if([elementName isEqualToString:@"title"]){
-            [currentEntry setTitle: buffer];
+            [currentEntry setTitle: cleanedBuffer];
         }
         else if([elementName isEqualToString:@"id"]){
-            [currentEntry setIdentifier:buffer];
+            [currentEntry setIdentifier:cleanedBuffer];
         }
         else if([elementName isEqualToString:@"updated"]){
-            [currentEntry setUpdated: [NSDate dateWithString:buffer]];
+            [currentEntry setUpdated: [NSDate dateWithString:cleanedBuffer]];
         }
         else if([elementName isEqualToString:@"summary"]){
-            [currentEntry setSummary:buffer];
+            
+            [currentEntry setSummary:cleanedBuffer];
         }
         else if([elementName isEqualToString:@"entry"]){
             [[feed entries] addObject: currentEntry];
+            
             state = ParserStateHeader;
         }
     }
     else {
+
         if([elementName isEqualToString:@"title"]){
-            [feed setTitle:buffer];
+            [feed setTitle:cleanedBuffer];
         }
         else if([elementName isEqualToString:@"author"])
             return;
         else if([elementName isEqualToString:@"name"]){
-            [feed setAuthor:buffer];
+            [feed setAuthor:cleanedBuffer];
         }
         else if([elementName isEqualToString:@"id"]){
-            [feed setIdentifier:buffer];
+            [feed setIdentifier:cleanedBuffer];
         }
     }
     

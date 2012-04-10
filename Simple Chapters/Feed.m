@@ -59,6 +59,7 @@
     
     [document setVersion:@"1.0"];
     [document setCharacterEncoding:@"UTF-8"];
+    [document setStandalone:YES];
     
     NSXMLNode *titleNode = [[NSXMLNode alloc] initWithKind:NSXMLElementKind];
     [titleNode setName:@"title"];
@@ -94,3 +95,4 @@
 }
 
 @end
+

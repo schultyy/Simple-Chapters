@@ -10,13 +10,13 @@
 
 @interface Enclosure : NSObject
 
-@property (retain) NSString *rel;
+@property (readwrite, copy) NSString *rel;
 
-@property (retain) NSString *type;
+@property (readwrite, copy) NSString *type;
 
-@property (retain) NSNumber *length;
+@property (readwrite, copy) NSNumber *length;
 
-@property (retain) NSString *href;
+@property (readwrite, copy) NSString *href;
 
 -(NSXMLElement *) saveToXml;
 
