@@ -35,25 +35,28 @@ NSInteger const ParserStateEntry = 1;
             [feed setUrl:value];
         }
         else{
-            id hrefEntry = [attributeDict valueForKey:@"href"];
-            id rel = [attributeDict valueForKey:@"rel"];
-            id type = [attributeDict valueForKey:@"type"];
-            id length = [attributeDict valueForKey:@"length"];
-            id hrefFile = [attributeDict valueForKey:@"href"];
             
-            if(hrefEntry){
-                [currentEntry setLink:hrefEntry];
+            NSString *href = [attributeDict valueForKey:@"href"];
+            
+            NSString *rel = [attributeDict valueForKey:@"rel"];
+            NSString *type = [attributeDict valueForKey:@"type"];
+            NSString *length = [attributeDict valueForKey:@"length"];
+                        
+            if(href && (!rel && !type && !length)){
+                [currentEntry setLink:href];
             }
-            
-            NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-            [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
-            
-            Enclosure *enclosure = [[Enclosure alloc] init];
-            [enclosure setHref: hrefFile];
-            [enclosure setRel: rel];
-            [enclosure setType: type];
-            [enclosure setLength: [formatter numberFromString: length]];
-            [currentEntry setEnclosure:enclosure];
+            else
+            {
+                NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+                
+                Enclosure *enclosure = [[Enclosure alloc] init];
+                [enclosure setHref: href];
+                [enclosure setRel: rel];
+                [enclosure setType: type];
+                [enclosure setLength: [formatter numberFromString: length]];
+                [currentEntry setEnclosure:enclosure];
+            }
         }
     }
     else if([elementName isEqualToString:@"entry"]){
