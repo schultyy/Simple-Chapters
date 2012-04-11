@@ -7,10 +7,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Feed.h"
 
 @interface BasicFeedInfoSheet : NSWindowController
 
-+(void) showSheetForWindow: (NSWindow *) window;
++(void) showSheetForFeed: (Feed *) feed InWindow: (NSWindow *) window;
+
+@property (retain, readwrite) NSString *title;
+
+@property (retain, readwrite) NSString *author;
+
+@property (retain, readwrite) NSString *identifer;
+
+@property (retain, readwrite) NSString *url;
 
 -(IBAction) saveInformations:(id) sender;
 -(IBAction) closeWithoutSaving:(id)sender;

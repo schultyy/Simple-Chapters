@@ -70,6 +70,8 @@
 		A11838091534BFA6002F6776 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A18E1D4F15320F6A00B5A6FD /* SCDocument.m */,
+				A18E1D4E15320F6A00B5A6FD /* SCDocument.h */,
 				A118380A1534BFB4002F6776 /* Sheets */,
 			);
 			name = Controllers;
@@ -139,8 +141,6 @@
 				A118380B1534BFD2002F6776 /* Resources */,
 				A11838091534BFA6002F6776 /* Controllers */,
 				A18E1D5C15320FB400B5A6FD /* Domain */,
-				A18E1D4E15320F6A00B5A6FD /* SCDocument.h */,
-				A18E1D4F15320F6A00B5A6FD /* SCDocument.m */,
 				A18E1D4315320F6A00B5A6FD /* Supporting Files */,
 			);
 			path = "Simple Chapters";

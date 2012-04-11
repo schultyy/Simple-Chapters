@@ -7,23 +7,43 @@
 //
 
 #import "BasicFeedInfoSheet.h"
+#import "Feed.h"
 
 @interface BasicFeedInfoSheet()
--(void) showSheetForWindow: (NSWindow *)window;
+-(void) showSheetForFeed: (Feed *) editingFeed InWindow: (NSWindow *) window;
+@property (retain, readwrite) Feed *feed;
 @end
 
 @implementation BasicFeedInfoSheet
 
+@synthesize title;
+
+@synthesize url;
+
+@synthesize author;
+
+@synthesize identifer;
+
+@synthesize feed;
+
 static BasicFeedInfoSheet *sheet;
 
-+(void) showSheetForWindow:(NSWindow *)window{
++(void) showSheetForFeed: (Feed *) feed InWindow: (NSWindow *) window{
     if(!sheet){
         sheet = [[BasicFeedInfoSheet alloc] initWithWindowNibName:@"BasicFeedInfoSheet"];
     }
-    [sheet showSheetForWindow:window];
+    [sheet showSheetForFeed: feed InWindow: window];
 }
 
--(void) showSheetForWindow:(NSWindow *)window{
+-(void) showSheetForFeed: (Feed *) editingFeed InWindow: (NSWindow *) window {
+    
+    [self setFeed: editingFeed];
+    
+    [self setTitle: [feed title]];
+    [self setUrl: [feed url]];
+    [self setAuthor: [feed author]];
+    [self setIdentifer: [feed identifier]];
+    
     [NSApp beginSheet:[self window] modalForWindow:window 
         modalDelegate:self 
         didEndSelector:NULL
@@ -31,6 +51,12 @@ static BasicFeedInfoSheet *sheet;
 }
 
 -(IBAction)saveInformations:(id)sender{
+    
+    [[self feed] setTitle: title];
+    [[self feed] setAuthor: author];
+    [[self feed] setUrl: url];
+    [[self feed] setIdentifier: identifer];
+    
     [NSApp endSheet:[self window]];
     [[self window] orderOut:self];
 }

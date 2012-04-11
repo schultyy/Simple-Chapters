@@ -16,8 +16,6 @@
 
 @property (retain) IBOutlet NSWindow *documentWindow;
 
-@property (retain) FeedEntry *currentFeedEntry;
-
 -(IBAction) showFeedInformationSheet:(id)sender;
 
 -(IBAction)addFeedEntry:(id)sender;
