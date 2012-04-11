@@ -30,6 +30,7 @@ Versions:
   * Create and load xml files in Simple Chapter format without chapter marks
   * Edit basic feed informations
   * Create and edit feed entries
+  * Executable available at Downloads section (Requires OS X 10.7)
 
 Me on Twitter:
 ===================
