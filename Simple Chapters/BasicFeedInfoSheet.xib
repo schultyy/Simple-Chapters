@@ -254,7 +254,7 @@
 						<object class="NSButton" id="953481443">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{432, 20}, {69, 32}}</string>
+							<string key="NSFrame">{{429, 20}, {76, 32}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView"/>
@@ -263,7 +263,7 @@
 							<object class="NSButtonCell" key="NSCell" id="772633701">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Save</string>
+								<string key="NSContents">Apply</string>
 								<reference key="NSSupport" ref="314947546"/>
 								<string key="NSCellIdentifier">_NS:687</string>
 								<reference key="NSControlView" ref="953481443"/>
@@ -278,7 +278,7 @@
 						<object class="NSButton" id="741475399">
 							<reference key="NSNextResponder" ref="1006"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{326, 20}, {106, 32}}</string>
+							<string key="NSFrame">{{335, 20}, {88, 32}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="953481443"/>
@@ -287,7 +287,7 @@
 							<object class="NSButtonCell" key="NSCell" id="330625026">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Don't save</string>
+								<string key="NSContents">Discard</string>
 								<reference key="NSSupport" ref="314947546"/>
 								<string key="NSCellIdentifier">_NS:687</string>
 								<reference key="NSControlView" ref="741475399"/>
@@ -309,7 +309,7 @@
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
-			<object class="NSUserDefaultsController" id="1037483932">
+			<object class="NSUserDefaultsController" id="34201974">
 				<bool key="NSSharedInstance">YES</bool>
 			</object>
 		</object>
@@ -603,7 +603,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">28</int>
-						<reference key="object" ref="1037483932"/>
+						<reference key="object" ref="34201974"/>
 						<reference key="parent" ref="1002"/>
 					</object>
 				</object>

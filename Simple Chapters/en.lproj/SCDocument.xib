@@ -130,7 +130,7 @@
 											<string key="NSFrameSize">{811, 437}</string>
 											<reference key="NSSuperview" ref="396372482"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="35740057"/>
+											<reference key="NSNextKeyView" ref="62957373"/>
 											<string key="NSReuseIdentifierKey">_NS:1828</string>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSTableHeaderView" key="NSHeaderView" id="244386903">
@@ -263,6 +263,7 @@
 									<string key="NSFrame">{{1, 119}, {223, 15}}</string>
 									<reference key="NSSuperview" ref="988611490"/>
 									<reference key="NSWindow"/>
+									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:1847</string>
 									<int key="NSsFlags">1</int>
 									<reference key="NSTarget" ref="988611490"/>
@@ -288,7 +289,7 @@
 							<string key="NSFrame">{{-1, -3}, {813, 455}}</string>
 							<reference key="NSSuperview" ref="568628114"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="396372482"/>
+							<reference key="NSNextKeyView" ref="35740057"/>
 							<string key="NSReuseIdentifierKey">_NS:1824</string>
 							<int key="NSsFlags">133682</int>
 							<reference key="NSVScroller" ref="62957373"/>
@@ -372,6 +373,14 @@
 						<reference key="destination" ref="111556307"/>
 					</object>
 					<int key="connectionID">100318</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">tableView</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="319025427"/>
+					</object>
+					<int key="connectionID">100319</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -562,7 +571,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">100318</int>
+			<int key="maxID">100319</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -627,6 +636,7 @@
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="documentWindow">NSWindow</string>
 						<string key="feedEntryArrayController">NSArrayController</string>
+						<string key="tableView">NSTableView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="documentWindow">
@@ -636,6 +646,10 @@
 						<object class="IBToOneOutletInfo" key="feedEntryArrayController">
 							<string key="name">feedEntryArrayController</string>
 							<string key="candidateClassName">NSArrayController</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="tableView">
+							<string key="name">tableView</string>
+							<string key="candidateClassName">NSTableView</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">

@@ -10,13 +10,17 @@
 #import "Feed.h"
 #import "FeedEntry.h"
 
-@interface SCDocument : NSDocument
+@interface SCDocument : NSDocument<NSTableViewDelegate>
 
 @property (retain) Feed *feed;
 
 @property (retain) IBOutlet NSWindow *documentWindow;
 
 @property (retain) IBOutlet NSArrayController *feedEntryArrayController;
+
+@property (assign) IBOutlet NSTableView *tableView;
+
+- (void)doubleClick:(id)nid;
 
 -(IBAction) showFeedInformationSheet:(id)sender;
 

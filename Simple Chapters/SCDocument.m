@@ -18,6 +18,7 @@
 @synthesize feed;
 @synthesize documentWindow;
 @synthesize feedEntryArrayController;
+@synthesize tableView;
 
 - (id)init
 {
@@ -33,6 +34,11 @@
     // Override returning the nib file name of the document
     // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
     return @"SCDocument";
+}
+
+-(void) awakeFromNib{
+    [super awakeFromNib];
+    [tableView setDoubleAction:@selector(doubleClick:)];
 }
 
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
@@ -68,8 +74,14 @@
     [FeedDetailSheet showFeedDetailSheetForEntry:newEntry InWindow:[self documentWindow]];
     
     [feedEntryArrayController rearrangeObjects];
+}
+
+- (void)doubleClick:(id)nid{
+    NSInteger index = [tableView clickedRow];
     
-    //[feedEntryTableView reloadData];
+    id newEntry = [[feedEntryArrayController arrangedObjects] objectAtIndex:index];
+    
+    [FeedDetailSheet showFeedDetailSheetForEntry:newEntry InWindow:[self documentWindow]];
 }
 
 + (BOOL)autosavesInPlace
