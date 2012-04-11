@@ -62,8 +62,8 @@
 							<object class="NSMutableString" key="NSToolbarItemIdentifier">
 								<characters key="NS.bytes">8CADD895-801F-4494-A111-904E69C2C4D8</characters>
 							</object>
-							<string key="NSToolbarItemLabel">Feed informations</string>
-							<string key="NSToolbarItemPaletteLabel">Feed informations</string>
+							<string key="NSToolbarItemLabel">Feed information</string>
+							<string key="NSToolbarItemPaletteLabel">Feed information</string>
 							<string key="NSToolbarItemToolTip"/>
 							<nil key="NSToolbarItemView"/>
 							<nil key="NSToolbarItemImage"/>
@@ -130,7 +130,7 @@
 											<string key="NSFrameSize">{811, 437}</string>
 											<reference key="NSSuperview" ref="396372482"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="62957373"/>
+											<reference key="NSNextKeyView" ref="35740057"/>
 											<string key="NSReuseIdentifierKey">_NS:1828</string>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSTableHeaderView" key="NSHeaderView" id="244386903">
@@ -293,7 +293,6 @@
 									<string key="NSFrame">{{1, 119}, {223, 15}}</string>
 									<reference key="NSSuperview" ref="988611490"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:1847</string>
 									<int key="NSsFlags">1</int>
 									<reference key="NSTarget" ref="988611490"/>
@@ -319,7 +318,7 @@
 							<string key="NSFrame">{{-1, -3}, {813, 455}}</string>
 							<reference key="NSSuperview" ref="568628114"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="35740057"/>
+							<reference key="NSNextKeyView" ref="396372482"/>
 							<string key="NSReuseIdentifierKey">_NS:1824</string>
 							<int key="NSsFlags">133682</int>
 							<reference key="NSVScroller" ref="62957373"/>
