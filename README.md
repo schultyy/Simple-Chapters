@@ -15,6 +15,7 @@ Features / ToDo
 * Create and edit Simple Chapter feeds
 	* Feed entries
 	* Feed entries with chapters
+* Autosave
 * Write chapters in to audio files
 * ...
 
@@ -22,6 +23,13 @@ Chapter specs
 ===================
 
 http://podlove.org/simple-chapters/
+
+Versions:
+===================
+v 0.1:
+* Create and load xml files in Simple Chapter format without chapter marks
+* Edit basic feed informations
+* Create and edit feed entries
 
 Me on Twitter:
 ===================
