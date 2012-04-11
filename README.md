@@ -26,10 +26,10 @@ http://podlove.org/simple-chapters/
 
 Versions:
 ===================
-v 0.1:
-* Create and load xml files in Simple Chapter format without chapter marks
-* Edit basic feed informations
-* Create and edit feed entries
+* v 0.1
+  * Create and load xml files in Simple Chapter format without chapter marks
+  * Edit basic feed informations
+  * Create and edit feed entries
 
 Me on Twitter:
 ===================
