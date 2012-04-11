@@ -17,6 +17,7 @@
 
 @synthesize feed;
 @synthesize documentWindow;
+@synthesize feedEntryArrayController;
 
 - (id)init
 {
@@ -59,7 +60,16 @@
 }
 
 -(IBAction)addFeedEntry:(id)sender{
-    [FeedDetailSheet showFeedDetailSheetForWindow: [self documentWindow]];
+    
+    FeedEntry *newEntry = [[FeedEntry alloc] init];
+    
+    [[[self feed] entries] addObject: newEntry];
+    
+    [FeedDetailSheet showFeedDetailSheetForEntry:newEntry InWindow:[self documentWindow]];
+    
+    [feedEntryArrayController rearrangeObjects];
+    
+    //[feedEntryTableView reloadData];
 }
 
 + (BOOL)autosavesInPlace
