@@ -57,7 +57,7 @@
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError
 {    
     feed = [[Feed alloc] initWithData: data];
-    
+    [tableView reloadData];
     return YES;
 }
 

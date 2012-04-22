@@ -19,6 +19,8 @@
 
 @property (retain, readwrite) NSString *summary;
 
+@property (retain, readwrite) NSString *fileLink;
+
 @property (retain, readwrite) FeedEntry *entry;
 
 +(void) showFeedDetailSheetForEntry:(FeedEntry*) feedEntry InWindow:(NSWindow *) window;

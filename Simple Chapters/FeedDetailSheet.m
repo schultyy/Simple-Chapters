@@ -25,6 +25,8 @@
 
 @synthesize entry;
 
+@synthesize fileLink;
+
 static FeedDetailSheet *sheet;
 
 +(void) showFeedDetailSheetForEntry:(FeedEntry*) feedEntry InWindow:(NSWindow *) window{
@@ -40,6 +42,7 @@ static FeedDetailSheet *sheet;
     [self setLink: [feedEntry link]];
     [self setIdentifier: [feedEntry identifier]];
     [self setSummary: [feedEntry summary]];
+    [self setFileLink: [[feedEntry enclosure] href]];
     
     [self setEntry: feedEntry];
     
@@ -53,6 +56,7 @@ static FeedDetailSheet *sheet;
     [entry setLink: link];
     [entry setIdentifier: identifier];
     [entry setSummary: summary];
+    [[entry enclosure] setHref:fileLink];
     
     [NSApp endSheet:[self window]];
     [[self window] orderOut:self];
