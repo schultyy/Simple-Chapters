@@ -22,6 +22,8 @@
 		A18E1D621532103300B5A6FD /* FeedParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A18E1D611532103300B5A6FD /* FeedParserDelegate.m */; };
 		A18E1D651532236E00B5A6FD /* FeedEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = A18E1D641532236D00B5A6FD /* FeedEntry.m */; };
 		A18E1D681532240900B5A6FD /* Enclosure.m in Sources */ = {isa = PBXBuildFile; fileRef = A18E1D671532240900B5A6FD /* Enclosure.m */; };
+		A1A0376315446163007B49FB /* EpisodeChapterSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1A0376215446163007B49FB /* EpisodeChapterSheet.xib */; };
+		A1A037671544617C007B49FB /* EpisodeChapterSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A037661544617C007B49FB /* EpisodeChapterSheet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,9 @@
 		A18E1D641532236D00B5A6FD /* FeedEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedEntry.m; sourceTree = "<group>"; };
 		A18E1D661532240900B5A6FD /* Enclosure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enclosure.h; sourceTree = "<group>"; };
 		A18E1D671532240900B5A6FD /* Enclosure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enclosure.m; sourceTree = "<group>"; };
+		A1A0376215446163007B49FB /* EpisodeChapterSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodeChapterSheet.xib; sourceTree = "<group>"; };
+		A1A037651544617C007B49FB /* EpisodeChapterSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodeChapterSheet.h; sourceTree = "<group>"; };
+		A1A037661544617C007B49FB /* EpisodeChapterSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodeChapterSheet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +89,8 @@
 				A118380F1534C109002F6776 /* BasicFeedInfoSheet.m */,
 				A11838151534CB9E002F6776 /* FeedDetailSheet.h */,
 				A11838161534CB9E002F6776 /* FeedDetailSheet.m */,
+				A1A037651544617C007B49FB /* EpisodeChapterSheet.h */,
+				A1A037661544617C007B49FB /* EpisodeChapterSheet.m */,
 			);
 			name = Sheets;
 			sourceTree = "<group>";
@@ -95,6 +102,7 @@
 				A18E1D5415320F6A00B5A6FD /* MainMenu.xib */,
 				A118380C1534C005002F6776 /* BasicFeedInfoSheet.xib */,
 				A11838131534CA87002F6776 /* FeedDetailSheet.xib */,
+				A1A0376215446163007B49FB /* EpisodeChapterSheet.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -229,6 +237,7 @@
 				A18E1D5615320F6A00B5A6FD /* MainMenu.xib in Resources */,
 				A118380D1534C005002F6776 /* BasicFeedInfoSheet.xib in Resources */,
 				A11838141534CA87002F6776 /* FeedDetailSheet.xib in Resources */,
+				A1A0376315446163007B49FB /* EpisodeChapterSheet.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +256,7 @@
 				A18E1D681532240900B5A6FD /* Enclosure.m in Sources */,
 				A11838101534C109002F6776 /* BasicFeedInfoSheet.m in Sources */,
 				A11838171534CB9E002F6776 /* FeedDetailSheet.m in Sources */,
+				A1A037671544617C007B49FB /* EpisodeChapterSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
