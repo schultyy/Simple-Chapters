@@ -12,6 +12,7 @@
 #import "FeedEntry.h"
 #import "BasicFeedInfoSheet.h"
 #import "FeedDetailSheet.h"
+#import "PodcastDetailController.h"
 
 @implementation SCDocument
 
@@ -19,12 +20,16 @@
 @synthesize documentWindow;
 @synthesize feedEntryArrayController;
 @synthesize tableView;
+@synthesize podcastDetailController;
+@synthesize detailView;
 
 - (id)init
 {
     self = [super init];
     if (self) {
         feed = [[Feed alloc] init];
+        podcastDetailController = [[PodcastDetailController alloc] initWithNibName:@"PodcastDetailView" bundle:nil];
+        detailView = [podcastDetailController view];
     }
     return self;
 }
@@ -57,6 +62,7 @@
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError
 {    
     feed = [[Feed alloc] initWithData: data];
+
     [tableView reloadData];
     return YES;
 }

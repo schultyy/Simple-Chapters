@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "Feed.h"
 #import "FeedEntry.h"
+#import "PodcastDetailController.h"
 
 @interface SCDocument : NSDocument<NSTableViewDelegate>
 
@@ -19,6 +20,10 @@
 @property (retain) IBOutlet NSArrayController *feedEntryArrayController;
 
 @property (assign) IBOutlet NSTableView *tableView;
+
+@property (retain) IBOutlet NSView *detailView;
+
+@property (retain) PodcastDetailController *podcastDetailController;
 
 - (void)doubleClick:(id)nid;
 

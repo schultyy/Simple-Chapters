@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1070</int>
-		<string key="IBDocument.SystemVersion">11C74</string>
+		<string key="IBDocument.SystemVersion">11E53</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1938</string>
-		<string key="IBDocument.AppKitVersion">1138.23</string>
-		<string key="IBDocument.HIToolboxVersion">567.00</string>
+		<string key="IBDocument.AppKitVersion">1138.47</string>
+		<string key="IBDocument.HIToolboxVersion">569.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			<string key="NS.object.0">1938</string>
@@ -20,6 +20,7 @@
 			<string>NSTextFieldCell</string>
 			<string>NSTableView</string>
 			<string>NSCustomObject</string>
+			<string>NSCustomView</string>
 			<string>NSView</string>
 			<string>NSWindowTemplate</string>
 			<string>NSUserDefaultsController</string>
@@ -127,7 +128,7 @@
 										<object class="NSTableView" id="319025427">
 											<reference key="NSNextResponder" ref="396372482"/>
 											<int key="NSvFlags">256</int>
-											<string key="NSFrameSize">{811, 437}</string>
+											<string key="NSFrameSize">{811, 330}</string>
 											<reference key="NSSuperview" ref="396372482"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="62957373"/>
@@ -265,7 +266,7 @@
 											<int key="NSTableViewGroupRowStyle">1</int>
 										</object>
 									</array>
-									<string key="NSFrame">{{1, 17}, {811, 437}}</string>
+									<string key="NSFrame">{{1, 17}, {811, 330}}</string>
 									<reference key="NSSuperview" ref="988611490"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="319025427"/>
@@ -316,7 +317,7 @@
 									<int key="NScvFlags">4</int>
 								</object>
 							</array>
-							<string key="NSFrame">{{-1, -3}, {813, 455}}</string>
+							<string key="NSFrame">{{-1, -1}, {813, 348}}</string>
 							<reference key="NSSuperview" ref="568628114"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="35740057"/>
@@ -328,13 +329,22 @@
 							<reference key="NSHeaderClipView" ref="35740057"/>
 							<bytes key="NSScrollAmts">QSAAAEEgAABBmAAAQZgAAA</bytes>
 						</object>
+						<object class="NSCustomView" id="141266859">
+							<reference key="NSNextResponder" ref="568628114"/>
+							<int key="NSvFlags">266</int>
+							<string key="NSFrame">{{0, 345}, {811, 106}}</string>
+							<reference key="NSSuperview" ref="568628114"/>
+							<reference key="NSWindow"/>
+							<string key="NSReuseIdentifierKey">_NS:1192</string>
+							<string key="NSClassName">NSView</string>
+						</object>
 					</array>
 					<string key="NSFrameSize">{811, 451}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
-					<reference key="NSNextKeyView" ref="988611490"/>
+					<reference key="NSNextKeyView"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1680, 1050}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1680, 1028}}</string>
 				<string key="NSMinSize">{94, 127}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<string key="NSFrameAutosaveName">FeedEditor</string>
@@ -411,6 +421,14 @@
 						<reference key="destination" ref="319025427"/>
 					</object>
 					<int key="connectionID">100319</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">detailView</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="141266859"/>
+					</object>
+					<int key="connectionID">100329</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -504,6 +522,7 @@
 						<reference key="object" ref="568628114"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="988611490"/>
+							<reference ref="141266859"/>
 						</array>
 						<reference key="parent" ref="275939982"/>
 					</object>
@@ -604,6 +623,11 @@
 						<reference key="object" ref="262176861"/>
 						<reference key="parent" ref="981927541"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100328</int>
+						<reference key="object" ref="141266859"/>
+						<reference key="parent" ref="568628114"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -625,6 +649,7 @@
 				<string key="100304.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="100320.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="100321.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="100328.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="5.IBWindowTemplateEditedContentRect">{{133, 170}, {507, 413}}</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -633,7 +658,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">100325</int>
+			<int key="maxID">100329</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -696,11 +721,16 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="detailView">NSView</string>
 						<string key="documentWindow">NSWindow</string>
 						<string key="feedEntryArrayController">NSArrayController</string>
 						<string key="tableView">NSTableView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="detailView">
+							<string key="name">detailView</string>
+							<string key="candidateClassName">NSView</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="documentWindow">
 							<string key="name">documentWindow</string>
 							<string key="candidateClassName">NSWindow</string>
