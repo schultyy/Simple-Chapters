@@ -24,8 +24,6 @@
 		A18E1D681532240900B5A6FD /* Enclosure.m in Sources */ = {isa = PBXBuildFile; fileRef = A18E1D671532240900B5A6FD /* Enclosure.m */; };
 		A1A0376315446163007B49FB /* EpisodeChapterSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1A0376215446163007B49FB /* EpisodeChapterSheet.xib */; };
 		A1A037671544617C007B49FB /* EpisodeChapterSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A037661544617C007B49FB /* EpisodeChapterSheet.m */; };
-		A1C7E34F15AF55C40029B38C /* PodcastDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1C7E34E15AF55C40029B38C /* PodcastDetailView.xib */; };
-		A1C7E35315AF57FB0029B38C /* PodcastDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C7E35215AF57FB0029B38C /* PodcastDetailController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,9 +58,6 @@
 		A1A0376215446163007B49FB /* EpisodeChapterSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodeChapterSheet.xib; sourceTree = "<group>"; };
 		A1A037651544617C007B49FB /* EpisodeChapterSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodeChapterSheet.h; sourceTree = "<group>"; };
 		A1A037661544617C007B49FB /* EpisodeChapterSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodeChapterSheet.m; sourceTree = "<group>"; };
-		A1C7E34E15AF55C40029B38C /* PodcastDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PodcastDetailView.xib; sourceTree = "<group>"; };
-		A1C7E35115AF57FA0029B38C /* PodcastDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PodcastDetailController.h; sourceTree = "<group>"; };
-		A1C7E35215AF57FB0029B38C /* PodcastDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodcastDetailController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +78,6 @@
 				A18E1D4F15320F6A00B5A6FD /* SCDocument.m */,
 				A18E1D4E15320F6A00B5A6FD /* SCDocument.h */,
 				A118380A1534BFB4002F6776 /* Sheets */,
-				A1C7E35115AF57FA0029B38C /* PodcastDetailController.h */,
-				A1C7E35215AF57FB0029B38C /* PodcastDetailController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -110,7 +103,6 @@
 				A118380C1534C005002F6776 /* BasicFeedInfoSheet.xib */,
 				A11838131534CA87002F6776 /* FeedDetailSheet.xib */,
 				A1A0376215446163007B49FB /* EpisodeChapterSheet.xib */,
-				A1C7E34E15AF55C40029B38C /* PodcastDetailView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -246,7 +238,6 @@
 				A118380D1534C005002F6776 /* BasicFeedInfoSheet.xib in Resources */,
 				A11838141534CA87002F6776 /* FeedDetailSheet.xib in Resources */,
 				A1A0376315446163007B49FB /* EpisodeChapterSheet.xib in Resources */,
-				A1C7E34F15AF55C40029B38C /* PodcastDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +257,6 @@
 				A11838101534C109002F6776 /* BasicFeedInfoSheet.m in Sources */,
 				A11838171534CB9E002F6776 /* FeedDetailSheet.m in Sources */,
 				A1A037671544617C007B49FB /* EpisodeChapterSheet.m in Sources */,
-				A1C7E35315AF57FB0029B38C /* PodcastDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

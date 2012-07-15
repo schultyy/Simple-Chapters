@@ -90,6 +90,7 @@
     [FeedDetailSheet showFeedDetailSheetForEntry:newEntry InWindow:[self documentWindow]];
 }
 
+
 + (BOOL)autosavesInPlace
 {
     return YES;
