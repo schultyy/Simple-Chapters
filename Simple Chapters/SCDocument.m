@@ -11,8 +11,8 @@
 #import "Feed.h"
 #import "FeedEntry.h"
 #import "BasicFeedInfoSheet.h"
-#import "FeedDetailSheet.h"
-#import "PodcastDetailController.h"
+#import "FeedDetailController.h"
+#import "EpisodeDetailController.h"
 
 @implementation SCDocument
 
@@ -20,16 +20,22 @@
 @synthesize documentWindow;
 @synthesize feedEntryArrayController;
 @synthesize tableView;
-@synthesize podcastDetailController;
-@synthesize detailView;
 
 - (id)init
 {
     self = [super init];
     if (self) {
         feed = [[Feed alloc] init];
-        podcastDetailController = [[PodcastDetailController alloc] initWithNibName:@"PodcastDetailView" bundle:nil];
-        detailView = [podcastDetailController view];
+//        podcastDetailController = [[PodcastDetailController alloc] initWithNibName:@"PodcastDetailView" bundle:nil];
+//        detailView = [podcastDetailController view];
+        
+        detailContextMenu = [[NSMenu alloc] initWithTitle:@"DetailMenu"];
+        
+        NSMenuItem *openDetailsItem = [[NSMenuItem alloc] initWithTitle:@"Details" action:@selector(contextMenuOpenDetails:) keyEquivalent:@""];
+        
+        [openDetailsItem setTarget:self];
+        
+        [detailContextMenu addItem:openDetailsItem];
     }
     return self;
 }
@@ -41,9 +47,21 @@
     return @"SCDocument";
 }
 
+-(void)contextMenuOpenDetails:(id)sender{
+    
+    NSLog(@"Fired");
+    
+    NSInteger index = [tableView clickedRow];
+    
+    id newEntry = [[feedEntryArrayController arrangedObjects] objectAtIndex:index];
+    
+    [EpisodeDetailController showEpisodeDetailSheetForEntry:newEntry inWindow:[self documentWindow]];
+}
+
+
 -(void) awakeFromNib{
     [super awakeFromNib];
-    [tableView setDoubleAction:@selector(doubleClick:)];
+    [tableView setMenu: detailContextMenu];
 }
 
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
@@ -77,19 +95,10 @@
     
     [[[self feed] entries] addObject: newEntry];
     
-    [FeedDetailSheet showFeedDetailSheetForEntry:newEntry InWindow:[self documentWindow]];
+//    [FeedDetailController showFeedDetailSheetForEntry:newEntry InWindow:[self documentWindow]];
     
     [feedEntryArrayController rearrangeObjects];
 }
-
-- (void)doubleClick:(id)nid{
-    NSInteger index = [tableView clickedRow];
-    
-    id newEntry = [[feedEntryArrayController arrangedObjects] objectAtIndex:index];
-    
-    [FeedDetailSheet showFeedDetailSheetForEntry:newEntry InWindow:[self documentWindow]];
-}
-
 
 + (BOOL)autosavesInPlace
 {

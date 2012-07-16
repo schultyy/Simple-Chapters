@@ -10,7 +10,9 @@
 #import "Feed.h"
 #import "FeedEntry.h"
 
-@interface SCDocument : NSDocument<NSTableViewDelegate>
+@interface SCDocument : NSDocument<NSTableViewDelegate>{
+    NSMenu *detailContextMenu;
+}
 
 @property (retain) Feed *feed;
 
@@ -20,7 +22,7 @@
 
 @property (assign) IBOutlet NSTableView *tableView;
 
-- (void)doubleClick:(id)nid;
+-(void)contextMenuOpenDetails:(id)sender;
 
 -(IBAction) showFeedInformationSheet:(id)sender;
 

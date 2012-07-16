@@ -6,14 +6,11 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "FeedDetailSheet.h"
+#import "FeedDetailController.h"
 #import "FeedEntry.h"
 
-@interface FeedDetailSheet()
--(void) showFeedDetailSheetForEntry:(FeedEntry*) feedEntry InWindow:(NSWindow *) window;
-@end
 
-@implementation FeedDetailSheet
+@implementation FeedDetailController
 
 @synthesize title;
 
@@ -27,14 +24,6 @@
 
 @synthesize fileLink;
 
-static FeedDetailSheet *sheet;
-
-+(void) showFeedDetailSheetForEntry:(FeedEntry*) feedEntry InWindow:(NSWindow *) window{
-    if(!sheet){
-        sheet = [[FeedDetailSheet alloc] initWithWindowNibName:@"FeedDetailSheet"];
-    }
-    [sheet showFeedDetailSheetForEntry:feedEntry InWindow:window];
-}
 
 -(void) showFeedDetailSheetForEntry:(FeedEntry*) feedEntry InWindow:(NSWindow *) window{
     
@@ -45,9 +34,6 @@ static FeedDetailSheet *sheet;
     [self setFileLink: [[feedEntry enclosure] href]];
     
     [self setEntry: feedEntry];
-    
-    [NSApp beginSheet:[self window]
-       modalForWindow: window modalDelegate:self didEndSelector:NULL contextInfo:NULL];
 }
 
 -(IBAction)saveAndClose:(id)sender{
@@ -58,13 +44,10 @@ static FeedDetailSheet *sheet;
     [entry setSummary: summary];
     [[entry enclosure] setHref:fileLink];
     
-    [NSApp endSheet:[self window]];
-    [[self window] orderOut:self];
 }
 
 -(IBAction)closeWithoutSaving:(id)sender{
-    [NSApp endSheet:[self window]];
-    [[self window] orderOut:self];
+
 }
 
 @end

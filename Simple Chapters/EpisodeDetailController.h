@@ -7,7 +7,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "FeedDetailController.h"
+#import "FeedEntry.h"
 
-@interface EpisodeDetailController : NSViewController
+@interface EpisodeDetailController : NSWindowController
+
+@property (retain) IBOutlet FeedDetailController *detailViewController;
+
+@property (retain) IBOutlet NSView *feedDetailView;
+
+-(IBAction)saveAndClose:(id)sender;
+
+-(IBAction)closeWithoutSaving:(id)sender;
+
++(void) showEpisodeDetailSheetForEntry: (FeedEntry *) feedEntry inWindow: (NSWindow *) window;
 
 @end
