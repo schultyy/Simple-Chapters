@@ -15,9 +15,10 @@ Features / ToDo
 * Create and edit Simple Chapter feeds
 	* Feed entries
 	* Feed entries with chapters
+*	Get all informations needed for the enclosure tag (File size, url, mime type, …) 
 * Autosave
 * Write chapters in to audio files
-* ...
+* Create feed from directory
 
 Chapter specs
 ===================
