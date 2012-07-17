@@ -21,6 +21,7 @@
 		A18E1D651532236E00B5A6FD /* FeedEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = A18E1D641532236D00B5A6FD /* FeedEntry.m */; };
 		A18E1D681532240900B5A6FD /* Enclosure.m in Sources */ = {isa = PBXBuildFile; fileRef = A18E1D671532240900B5A6FD /* Enclosure.m */; };
 		A1A037671544617C007B49FB /* EpisodeChapterSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A037661544617C007B49FB /* EpisodeChapterSheet.m */; };
+		A1CFFDE615B5F475003DC1B4 /* Chapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CFFDE515B5F475003DC1B4 /* Chapter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		A18E1D671532240900B5A6FD /* Enclosure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enclosure.m; sourceTree = "<group>"; };
 		A1A037651544617C007B49FB /* EpisodeChapterSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodeChapterSheet.h; sourceTree = "<group>"; };
 		A1A037661544617C007B49FB /* EpisodeChapterSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodeChapterSheet.m; sourceTree = "<group>"; };
+		A1CFFDE415B5F475003DC1B4 /* Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chapter.h; sourceTree = "<group>"; };
+		A1CFFDE515B5F475003DC1B4 /* Chapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chapter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 				A18E1D641532236D00B5A6FD /* FeedEntry.m */,
 				A18E1D661532240900B5A6FD /* Enclosure.h */,
 				A18E1D671532240900B5A6FD /* Enclosure.m */,
+				A1CFFDE415B5F475003DC1B4 /* Chapter.h */,
+				A1CFFDE515B5F475003DC1B4 /* Chapter.m */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 				A18E1D681532240900B5A6FD /* Enclosure.m in Sources */,
 				A11838101534C109002F6776 /* BasicFeedInfoSheet.m in Sources */,
 				A1A037671544617C007B49FB /* EpisodeChapterSheet.m in Sources */,
+				A1CFFDE615B5F475003DC1B4 /* Chapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

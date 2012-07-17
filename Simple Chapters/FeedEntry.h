@@ -21,6 +21,8 @@
 
 @property (readwrite, copy) NSString *summary;
 
+@property (readwrite, copy) NSMutableArray *chapters;
+
 @property (retain) Enclosure *enclosure;
 
 -(NSXMLElement *) saveToXml;

@@ -26,4 +26,8 @@
 
 -(NSData *) saveToXml;
 
++(NSString *) xmlNamespacePrefix;
+
++(NSString *) xmlNamespace;
+
 @end

@@ -53,7 +53,11 @@
     
     [root addNamespace: [NSXMLNode namespaceWithName:@"" stringValue:@"http://www.w3.org/2005/Atom"]];
     
-    [root addNamespace: [NSXMLNode namespaceWithName:@"sc" stringValue:@"http://podlove.org/simple-chapters"]];
+    id namespace = [Feed xmlNamespace];
+    
+    id namespacePrefix = [Feed xmlNamespacePrefix];
+    
+    [root addNamespace: [NSXMLNode namespaceWithName:namespacePrefix stringValue: namespace]];
     
     id document = [[NSXMLDocument alloc] initWithRootElement:root];
     
@@ -92,6 +96,14 @@
     }
     
     return [document XMLData];
+}
+
++(NSString*) xmlNamespace{
+    return @"http://podlove.org/simple-chapters";
+}
+
++(NSString*) xmlNamespacePrefix{
+    return @"sc";
 }
 
 @end
