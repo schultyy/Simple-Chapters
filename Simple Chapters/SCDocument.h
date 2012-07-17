@@ -9,7 +9,6 @@
 #import <Cocoa/Cocoa.h>
 #import "Feed.h"
 #import "FeedEntry.h"
-#import "FeedDetailController.h"
 
 @interface SCDocument : NSDocument<NSTableViewDelegate>
 
@@ -23,12 +22,8 @@
 
 @property (assign) IBOutlet NSView *detailView;
 
-@property (retain) FeedDetailController *detailController;
-
 -(IBAction) showFeedInformationSheet:(id)sender;
 
 -(IBAction)addFeedEntry:(id)sender;
-
--(void) showFeedInformations: (id) sender;
 
 @end

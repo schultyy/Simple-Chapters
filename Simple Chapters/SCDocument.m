@@ -11,7 +11,6 @@
 #import "Feed.h"
 #import "FeedEntry.h"
 #import "BasicFeedInfoSheet.h"
-#import "FeedDetailController.h"
 
 @implementation SCDocument
 
@@ -19,7 +18,6 @@
 @synthesize documentWindow;
 @synthesize feedEntryArrayController;
 @synthesize tableView;
-@synthesize detailController;
 @synthesize detailView;
 
 - (id)init
@@ -54,24 +52,13 @@
 -(void) awakeFromNib{
     [super awakeFromNib];
     
-    detailController = [[FeedDetailController alloc] initWithNibName:@"FeedDetailView" bundle:nil];
-    
-    [detailView addSubview: [detailController view]];
-    
-    [tableView setDoubleAction:@selector(showFeedInformations:)];
+    //[tableView setDoubleAction:@selector(showFeedInformations:)];
 }
 
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
 {
     [super windowControllerDidLoadNib:aController];
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
-}
-
--(void) showFeedInformations: (id) sender{
-    NSInteger index = [tableView clickedRow];
-    
-    id newEntry = [[feedEntryArrayController arrangedObjects] objectAtIndex:index];
-    [detailController showFeedDetailSheetForEntry: newEntry InWindow: [self documentWindow]];
 }
 
 
@@ -107,8 +94,6 @@
     [[[self feed] entries] addObject: newEntry];
     
     [feedEntryArrayController rearrangeObjects];
-    
-    [detailController showFeedDetailSheetForEntry: newEntry InWindow: [self documentWindow]];
 }
 
 + (BOOL)autosavesInPlace
