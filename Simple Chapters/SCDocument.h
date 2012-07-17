@@ -29,4 +29,6 @@
 
 -(IBAction)addFeedEntry:(id)sender;
 
+-(void) showFeedInformations: (id) sender;
+
 @end

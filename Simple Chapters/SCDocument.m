@@ -58,6 +58,7 @@
     
     [detailView addSubview: [detailController view]];
     
+    [tableView setDoubleAction:@selector(showFeedInformations:)];
 }
 
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
@@ -65,6 +66,14 @@
     [super windowControllerDidLoadNib:aController];
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
 }
+
+-(void) showFeedInformations: (id) sender{
+    NSInteger index = [tableView clickedRow];
+    
+    id newEntry = [[feedEntryArrayController arrangedObjects] objectAtIndex:index];
+    [detailController showFeedDetailSheetForEntry: newEntry InWindow: [self documentWindow]];
+}
+
 
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError
 {    
@@ -89,11 +98,17 @@
     
     FeedEntry *newEntry = [[FeedEntry alloc] init];
     
+    NSDate *date = [NSDate date];
+    
+    id title = [@"New Episode - " stringByAppendingString: [date description]];
+    
+    [newEntry setTitle: title];
+    
     [[[self feed] entries] addObject: newEntry];
     
-//    [FeedDetailController showFeedDetailSheetForEntry:newEntry InWindow:[self documentWindow]];
-    
     [feedEntryArrayController rearrangeObjects];
+    
+    [detailController showFeedDetailSheetForEntry: newEntry InWindow: [self documentWindow]];
 }
 
 + (BOOL)autosavesInPlace
