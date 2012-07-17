@@ -36,24 +36,7 @@
     // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
     return @"SCDocument";
 }
-//
-//-(void)contextMenuOpenDetails:(id)sender{
-//    
-//    NSLog(@"Fired");
-//    
-//    NSInteger index = [tableView clickedRow];
-//    
-//    id newEntry = [[feedEntryArrayController arrangedObjects] objectAtIndex:index];
-//    
-//    //[EpisodeDetailController showEpisodeDetailSheetForEntry:newEntry inWindow:[self documentWindow]];
-//}
 
-
--(void) awakeFromNib{
-    [super awakeFromNib];
-    
-    //[tableView setDoubleAction:@selector(showFeedInformations:)];
-}
 
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
 {
@@ -85,9 +68,14 @@
     
     FeedEntry *newEntry = [[FeedEntry alloc] init];
     
-    NSDate *date = [NSDate date];
+    NSDate *date = [[NSDate alloc] init];
     
-    id title = [@"New Episode - " stringByAppendingString: [date description]];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd.MMM.yyyy HH:mm:ss"];
+    
+    id dateString = [dateFormatter stringFromDate: date];
+    
+    id title = [@"New Episode - " stringByAppendingString: dateString];
     
     [newEntry setTitle: title];
     
