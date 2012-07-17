@@ -19,6 +19,7 @@ Features / ToDo
 * Autosave
 * Write chapters in to audio files
 * Create feed from directory
+	* Create file url automatically from predefined base url
 
 Chapter specs
 ===================
