@@ -12,7 +12,6 @@
 #import "FeedEntry.h"
 #import "BasicFeedInfoSheet.h"
 #import "FeedDetailController.h"
-#import "EpisodeDetailController.h"
 
 @implementation SCDocument
 
@@ -20,22 +19,15 @@
 @synthesize documentWindow;
 @synthesize feedEntryArrayController;
 @synthesize tableView;
+@synthesize detailController;
+@synthesize detailView;
 
 - (id)init
 {
     self = [super init];
     if (self) {
         feed = [[Feed alloc] init];
-//        podcastDetailController = [[PodcastDetailController alloc] initWithNibName:@"PodcastDetailView" bundle:nil];
-//        detailView = [podcastDetailController view];
         
-        detailContextMenu = [[NSMenu alloc] initWithTitle:@"DetailMenu"];
-        
-        NSMenuItem *openDetailsItem = [[NSMenuItem alloc] initWithTitle:@"Details" action:@selector(contextMenuOpenDetails:) keyEquivalent:@""];
-        
-        [openDetailsItem setTarget:self];
-        
-        [detailContextMenu addItem:openDetailsItem];
     }
     return self;
 }
@@ -46,22 +38,26 @@
     // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
     return @"SCDocument";
 }
-
--(void)contextMenuOpenDetails:(id)sender{
-    
-    NSLog(@"Fired");
-    
-    NSInteger index = [tableView clickedRow];
-    
-    id newEntry = [[feedEntryArrayController arrangedObjects] objectAtIndex:index];
-    
-    [EpisodeDetailController showEpisodeDetailSheetForEntry:newEntry inWindow:[self documentWindow]];
-}
+//
+//-(void)contextMenuOpenDetails:(id)sender{
+//    
+//    NSLog(@"Fired");
+//    
+//    NSInteger index = [tableView clickedRow];
+//    
+//    id newEntry = [[feedEntryArrayController arrangedObjects] objectAtIndex:index];
+//    
+//    //[EpisodeDetailController showEpisodeDetailSheetForEntry:newEntry inWindow:[self documentWindow]];
+//}
 
 
 -(void) awakeFromNib{
     [super awakeFromNib];
-    [tableView setMenu: detailContextMenu];
+    
+    detailController = [[FeedDetailController alloc] initWithNibName:@"FeedDetailView" bundle:nil];
+    
+    [detailView addSubview: [detailController view]];
+    
 }
 
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController

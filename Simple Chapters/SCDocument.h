@@ -9,10 +9,9 @@
 #import <Cocoa/Cocoa.h>
 #import "Feed.h"
 #import "FeedEntry.h"
+#import "FeedDetailController.h"
 
-@interface SCDocument : NSDocument<NSTableViewDelegate>{
-    NSMenu *detailContextMenu;
-}
+@interface SCDocument : NSDocument<NSTableViewDelegate>
 
 @property (retain) Feed *feed;
 
@@ -22,7 +21,9 @@
 
 @property (assign) IBOutlet NSTableView *tableView;
 
--(void)contextMenuOpenDetails:(id)sender;
+@property (assign) IBOutlet NSView *detailView;
+
+@property (retain) FeedDetailController *detailController;
 
 -(IBAction) showFeedInformationSheet:(id)sender;
 

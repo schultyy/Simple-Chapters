@@ -10,8 +10,6 @@
 		A118380D1534C005002F6776 /* BasicFeedInfoSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = A118380C1534C005002F6776 /* BasicFeedInfoSheet.xib */; };
 		A11838101534C109002F6776 /* BasicFeedInfoSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A118380F1534C109002F6776 /* BasicFeedInfoSheet.m */; };
 		A11838171534CB9E002F6776 /* FeedDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11838161534CB9E002F6776 /* FeedDetailController.m */; };
-		A15346BA15B4845400A6FBFC /* EpisodeDetailSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = A15346B915B4845400A6FBFC /* EpisodeDetailSheet.xib */; };
-		A15346BE15B4851400A6FBFC /* EpisodeDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = A15346BC15B4851400A6FBFC /* EpisodeDetailController.m */; };
 		A15346C115B4996100A6FBFC /* FeedDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A15346C015B4996100A6FBFC /* FeedDetailView.xib */; };
 		A18E1D3D15320F6A00B5A6FD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E1D3C15320F6A00B5A6FD /* Cocoa.framework */; };
 		A18E1D4715320F6A00B5A6FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A18E1D4515320F6A00B5A6FD /* InfoPlist.strings */; };
@@ -32,9 +30,6 @@
 		A118380E1534C109002F6776 /* BasicFeedInfoSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicFeedInfoSheet.h; sourceTree = "<group>"; };
 		A118380F1534C109002F6776 /* BasicFeedInfoSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicFeedInfoSheet.m; sourceTree = "<group>"; };
 		A11838161534CB9E002F6776 /* FeedDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedDetailController.m; sourceTree = "<group>"; };
-		A15346B915B4845400A6FBFC /* EpisodeDetailSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodeDetailSheet.xib; sourceTree = "<group>"; };
-		A15346BB15B4851400A6FBFC /* EpisodeDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodeDetailController.h; sourceTree = "<group>"; };
-		A15346BC15B4851400A6FBFC /* EpisodeDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodeDetailController.m; sourceTree = "<group>"; };
 		A15346C015B4996100A6FBFC /* FeedDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedDetailView.xib; sourceTree = "<group>"; };
 		A15346C215B49A7900A6FBFC /* FeedDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedDetailController.h; sourceTree = "<group>"; };
 		A18E1D3815320F6A00B5A6FD /* Simple Chapters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Chapters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,8 +89,6 @@
 				A11838161534CB9E002F6776 /* FeedDetailController.m */,
 				A1A037651544617C007B49FB /* EpisodeChapterSheet.h */,
 				A1A037661544617C007B49FB /* EpisodeChapterSheet.m */,
-				A15346BB15B4851400A6FBFC /* EpisodeDetailController.h */,
-				A15346BC15B4851400A6FBFC /* EpisodeDetailController.m */,
 			);
 			name = Sheets;
 			sourceTree = "<group>";
@@ -106,7 +99,6 @@
 				A18E1D5115320F6A00B5A6FD /* SCDocument.xib */,
 				A18E1D5415320F6A00B5A6FD /* MainMenu.xib */,
 				A118380C1534C005002F6776 /* BasicFeedInfoSheet.xib */,
-				A15346B915B4845400A6FBFC /* EpisodeDetailSheet.xib */,
 				A15346C015B4996100A6FBFC /* FeedDetailView.xib */,
 			);
 			name = Resources;
@@ -241,7 +233,6 @@
 				A18E1D5315320F6A00B5A6FD /* SCDocument.xib in Resources */,
 				A18E1D5615320F6A00B5A6FD /* MainMenu.xib in Resources */,
 				A118380D1534C005002F6776 /* BasicFeedInfoSheet.xib in Resources */,
-				A15346BA15B4845400A6FBFC /* EpisodeDetailSheet.xib in Resources */,
 				A15346C115B4996100A6FBFC /* FeedDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,7 +253,6 @@
 				A11838101534C109002F6776 /* BasicFeedInfoSheet.m in Sources */,
 				A11838171534CB9E002F6776 /* FeedDetailController.m in Sources */,
 				A1A037671544617C007B49FB /* EpisodeChapterSheet.m in Sources */,
-				A15346BE15B4851400A6FBFC /* EpisodeDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
