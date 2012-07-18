@@ -1281,6 +1281,14 @@
 					<int key="connectionID">100431</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">remove:</string>
+						<reference key="source" ref="456591707"/>
+						<reference key="destination" ref="314649119"/>
+					</object>
+					<int key="connectionID">100445</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: selection.title</string>
 						<reference key="source" ref="460401695"/>
@@ -1920,7 +1928,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">100444</int>
+			<int key="maxID">100445</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

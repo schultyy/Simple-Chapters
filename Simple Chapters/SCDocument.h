@@ -10,7 +10,9 @@
 #import "Feed.h"
 #import "FeedEntry.h"
 
-@interface SCDocument : NSDocument<NSTableViewDelegate>
+@interface SCDocument : NSDocument<NSTableViewDelegate>{
+    NSMenu *contextMenu;
+}
 
 @property (retain) Feed *feed;
 
@@ -25,5 +27,7 @@
 -(IBAction) showFeedInformationSheet:(id)sender;
 
 -(IBAction)addFeedEntry:(id)sender;
+
+-(void) deleteEpisode: (id) sender;
 
 @end

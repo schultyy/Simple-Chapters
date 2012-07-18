@@ -25,9 +25,21 @@
     self = [super init];
     if (self) {
         feed = [[Feed alloc] init];
+        contextMenu = [[NSMenu alloc] initWithTitle:@"Menu"];
         
+        NSMenuItem *deleteItem = [[NSMenuItem alloc] initWithTitle:@"Delete episode" action:@selector(deleteEpisode:) keyEquivalent:@""];
+        
+        [deleteItem setTarget: self];
+        
+        [contextMenu addItem: deleteItem];
     }
     return self;
+}
+
+-(void) awakeFromNib{
+    [super awakeFromNib];
+    
+    [tableView setMenu: contextMenu];
 }
 
 - (NSString *)windowNibName
@@ -37,13 +49,17 @@
     return @"SCDocument";
 }
 
-
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
 {
     [super windowControllerDidLoadNib:aController];
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
 }
 
+-(void) deleteEpisode: (id) sender{
+    
+    NSInteger selectedIndex = [tableView selectedRow];
+    [feedEntryArrayController removeObjectAtArrangedObjectIndex:selectedIndex];
+}
 
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError
 {    
