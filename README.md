@@ -15,7 +15,7 @@ More features comming soon!
 	* Feed entries with chapters
 * Autosave
 
-## TO DO
+## To Do
 
 * Get all informations needed for the enclosure tag (File size, url, mime type, …)
 * Write chapters in to audio files
