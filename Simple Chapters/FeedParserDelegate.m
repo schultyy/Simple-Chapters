@@ -75,9 +75,6 @@ NSInteger const ParserStateEntry = 1;
         [chapter setTitle:title];
         [[currentEntry chapters] addObject: chapter];
     }
-    else{
-        NSLog(@"%@", elementName);
-    }
         
 }
 
