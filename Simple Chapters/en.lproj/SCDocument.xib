@@ -515,7 +515,6 @@
 												<int key="NSvFlags">268</int>
 												<string key="NSFrame">{{17, 169}, {352, 88}}</string>
 												<reference key="NSSuperview" ref="264165942"/>
-												<reference key="NSNextKeyView"/>
 												<string key="NSReuseIdentifierKey">_NS:354</string>
 												<string key="NSAntiCompressionPriority">{250, 750}</string>
 												<bool key="NSEnabled">YES</bool>
@@ -842,6 +841,7 @@
 													<int key="NSCellFlags2">272630784</int>
 													<string key="NSContents"/>
 													<reference key="NSSupport" ref="64006031"/>
+													<string key="NSPlaceholderString">This is the title</string>
 													<string key="NSCellIdentifier">_NS:903</string>
 													<reference key="NSControlView" ref="460401695"/>
 													<bool key="NSDrawsBackground">YES</bool>
@@ -863,6 +863,7 @@
 													<int key="NSCellFlags2">272630784</int>
 													<string key="NSContents"/>
 													<reference key="NSSupport" ref="64006031"/>
+													<string key="NSPlaceholderString">[HH:]MM:SS[.mmm]</string>
 													<string key="NSCellIdentifier">_NS:903</string>
 													<reference key="NSControlView" ref="285228135"/>
 													<bool key="NSDrawsBackground">YES</bool>
@@ -884,6 +885,7 @@
 													<int key="NSCellFlags2">272630784</int>
 													<string key="NSContents"/>
 													<reference key="NSSupport" ref="64006031"/>
+													<string key="NSPlaceholderString">http://example.org/</string>
 													<string key="NSCellIdentifier">_NS:903</string>
 													<reference key="NSControlView" ref="459776341"/>
 													<bool key="NSDrawsBackground">YES</bool>
