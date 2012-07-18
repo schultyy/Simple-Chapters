@@ -10,6 +10,7 @@
 #import "Feed.h"
 #import "FeedEntry.h"
 #import "Enclosure.h"
+#include "Chapter.h"
 
 @implementation FeedParserDelegate
 
@@ -63,6 +64,21 @@ NSInteger const ParserStateEntry = 1;
         state = ParserStateEntry;
         currentEntry = [[FeedEntry alloc] init];
     }
+    else if([elementName isEqualToString:@"sc:chapter"]){
+        id start = [attributeDict valueForKey:@"start"];
+        id title = [attributeDict valueForKey:@"title"];
+        id url = [attributeDict valueForKey:@"url"];
+        
+        Chapter *chapter = [[Chapter alloc] init];
+        [chapter setUrl:url];
+        [chapter setStart: start];
+        [chapter setTitle:title];
+        [[currentEntry chapters] addObject: chapter];
+    }
+    else{
+        NSLog(@"%@", elementName);
+    }
+        
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
